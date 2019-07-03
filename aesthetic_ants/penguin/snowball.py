@@ -18,5 +18,5 @@ class Snowball(PhysicalObject):
         self.velocity_y = velocity_y
 
     def update(self, dt):
-        self.x += self.velocity_x
-        self.y += self.velocity_y
+        self.x += self.velocity_x * dt
+        self.y += self.velocity_y * dt
