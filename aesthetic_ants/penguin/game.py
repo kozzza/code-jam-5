@@ -15,7 +15,7 @@ class Game(pyglet.window.Window):
     score = 0
 
     def __init__(self, *, fps=120, **kwargs):
-        super().__init__(caption='Penguin Snowball', **kwargs)
+        super().__init__(caption='Penguin Snowball', **kwargs, fullscreen=True)
         self.is_over = False
         self.fps = fps
 
@@ -25,8 +25,8 @@ class Game(pyglet.window.Window):
         self.space = self.create_space()
         self.space.add(self.player)
         for _ in range(5):
-            self.space.add(BigEnemy(10, 5))
-            self.space.add(FastEnemy(15, 5))
+            self.space.add(BigEnemy(50, 5))
+            self.space.add(FastEnemy(35, 50))
 
         # Create background layer
         self.tiles = self.create_tiles()
